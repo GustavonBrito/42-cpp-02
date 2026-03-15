@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 08:32:13 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2026/03/13 00:00:28 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2026/03/15 13:08:26 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ void Fixed::setRawBits(int const raw)
 {
     this->_fixed_number_point = raw << _fractionary_bits;
 }
+
 
 
