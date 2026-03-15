@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo <gustavo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 23:41:01 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2026/03/15 17:04:22 by gustavo          ###   ########.fr       */
+/*   Updated: 2026/03/15 19:05:24 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,18 @@ class Fixed
 {
     public:
         Fixed(void);
-        Fixed(int const);
-        Fixed(float const);
+        Fixed(const int int_value);
+        Fixed(const float float_value);
         Fixed(Fixed const& other); // Variable Reference 
-        Fixed &operator<<(const Fixed &other); // Im giving equal operator another meaning 
+        
+        Fixed &operator=(const Fixed &other); // Im giving equal operator another meaning 
+        
         ~Fixed(void);
+        
         int getRawBits(void) const;
         void setRawBits(int const raw);
-        int toInt( void ) const;
         float toFloat( void ) const;
+        int toInt( void ) const;
         
     private:
     
