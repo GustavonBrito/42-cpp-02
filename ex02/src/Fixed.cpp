@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 08:32:13 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2026/03/15 23:48:13 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2026/03/19 22:26:57 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,19 +50,23 @@ bool Fixed::operator==(const Fixed &random_num)
 }
 bool Fixed::operator<=(const Fixed &random_num)
 {
-    return this->_fixed_number_point == random_num._fixed_number_point;
+    return this->_fixed_number_point <= random_num._fixed_number_point;
 }
 bool Fixed::operator>=(const Fixed &random_num)
 {
-    return this->_fixed_number_point == random_num._fixed_number_point;
+    return this->_fixed_number_point >= random_num._fixed_number_point;
 }
 bool Fixed::operator!=(const Fixed &random_num)
 {
-    return this->_fixed_number_point == random_num._fixed_number_point;
+    return this->_fixed_number_point != random_num._fixed_number_point;
 }
 bool Fixed::operator<(const Fixed &random_num)
 {
-    return this->_fixed_number_point == random_num._fixed_number_point;
+    return this->_fixed_number_point < random_num._fixed_number_point;
+}
+bool Fixed::operator>(const Fixed &random_num)
+{
+    return this->_fixed_number_point > random_num._fixed_number_point;
 }
 
 

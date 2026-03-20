@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 23:41:01 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2026/03/15 23:48:25 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2026/03/19 22:25:55 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class Fixed
         bool operator>=(const Fixed &random_num);
         bool operator!=(const Fixed &random_num);
         bool operator<(const Fixed &random_num);
+        bool operator>(const Fixed &random_num);
         
         Fixed operator+(const Fixed &random_num) const;
         Fixed operator-(const Fixed &random_num) const;
