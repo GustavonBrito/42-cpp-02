@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 23:41:01 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2026/03/20 07:29:29 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2026/03/20 07:38:40 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ class Fixed
         
         Fixed &operator=(const Fixed &other);
 
-        bool operator==(const Fixed &random_num);
-        bool operator<=(const Fixed &random_num);
-        bool operator>=(const Fixed &random_num);
-        bool operator!=(const Fixed &random_num);
-        bool operator<(const Fixed &random_num);
-        bool operator>(const Fixed &random_num);
+        bool operator==(const Fixed &random_num) const;
+        bool operator<=(const Fixed &random_num) const;
+        bool operator>=(const Fixed &random_num) const;
+        bool operator!=(const Fixed &random_num) const;
+        bool operator<(const Fixed &random_num) const;
+        bool operator>(const Fixed &random_num) const;
         
         Fixed operator+(const Fixed &random_num) const;
         Fixed operator-(const Fixed &random_num) const;

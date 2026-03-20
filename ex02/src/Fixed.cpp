@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 08:32:13 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2026/03/20 07:29:01 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2026/03/20 07:59:20 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,20 @@ Fixed::Fixed() : _fixed_number_point(0) {std::cout << "Default constructor calle
 Fixed::Fixed(Fixed const& other)
 {
     _fixed_number_point = other._fixed_number_point;
-    std::cout << "Copy construcotor called\n";
+    std::cout << "Copy constructor called" << std::endl;
 };
 Fixed::Fixed(int const int_value) : _fixed_number_point(int_value << _fractionary_bits)
 {
-    std::cout << "Int constructor called\n";
+    std::cout << "Int constructor called" << std::endl;
 };
 Fixed::Fixed(float const float_value) : _fixed_number_point(roundf(float_value * (1 << _fractionary_bits)))
 {
-    std::cout << "Float constructor called\n";
+    std::cout << "Float constructor called" << std::endl;
 };
 
 Fixed & Fixed::operator=(const Fixed &other) 
 {
-    std::cout << "Copy assignment operator called\n";
+    std::cout << "Copy assignment operator called" << std::endl;
     if (this == &other)
         return *this;
     
@@ -45,27 +45,27 @@ std::ostream & operator<<(std::ostream &os, Fixed const &fixed)
     return os;
 }
 
-bool Fixed::operator==(const Fixed &random_num)
+bool Fixed::operator==(const Fixed &random_num) const
 {
     return this->_fixed_number_point == random_num._fixed_number_point;
 }
-bool Fixed::operator<=(const Fixed &random_num)
+bool Fixed::operator<=(const Fixed &random_num) const
 {
     return this->_fixed_number_point <= random_num._fixed_number_point;
 }
-bool Fixed::operator>=(const Fixed &random_num)
+bool Fixed::operator>=(const Fixed &random_num) const
 {
     return this->_fixed_number_point >= random_num._fixed_number_point;
 }
-bool Fixed::operator!=(const Fixed &random_num)
+bool Fixed::operator!=(const Fixed &random_num) const
 {
     return this->_fixed_number_point != random_num._fixed_number_point;
 }
-bool Fixed::operator<(const Fixed &random_num)
+bool Fixed::operator<(const Fixed &random_num) const
 {
     return this->_fixed_number_point < random_num._fixed_number_point;
 }
-bool Fixed::operator>(const Fixed &random_num)
+bool Fixed::operator>(const Fixed &random_num) const
 {
     return this->_fixed_number_point > random_num._fixed_number_point;
 }
@@ -74,13 +74,13 @@ bool Fixed::operator>(const Fixed &random_num)
 Fixed Fixed::operator+(const Fixed &random_num) const
 {
     Fixed result;
-    result = this->_fixed_number_point + random_num._fixed_number_point;
+    result._fixed_number_point = this->_fixed_number_point + random_num._fixed_number_point;
     return result;
 }
 Fixed Fixed::operator-(const Fixed &random_num) const
 {
     Fixed result;
-    result = this->_fixed_number_point - random_num._fixed_number_point;
+    result._fixed_number_point = this->_fixed_number_point - random_num._fixed_number_point;
     return result;
 }
 Fixed Fixed::operator*(const Fixed &other) const
@@ -92,7 +92,8 @@ Fixed Fixed::operator*(const Fixed &other) const
 Fixed Fixed::operator/(const Fixed &random_num) const
 {
     Fixed result;
-    result = this->_fixed_number_point / random_num._fixed_number_point;
+    result._fixed_number_point =
+        (this->_fixed_number_point << _fractionary_bits) / random_num._fixed_number_point;
     return result;
 }
 
@@ -159,5 +160,5 @@ int Fixed::getRawBits() const
 };
 void Fixed::setRawBits(int const raw)
 {
-    this->_fixed_number_point = raw << _fractionary_bits;
-};
+    this->_fixed_number_point = raw;
+}

@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 08:32:13 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2026/03/15 13:08:26 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2026/03/20 07:56:12 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Fixed::Fixed(Fixed const& other) : _fixed_number_point(other._fixed_number_point
 
 int Fixed::getRawBits() const
 {
-    std::cout << "getRawBits member function called\n";
+    std::cout << "getRawBits member function called" << std::endl;
     return this->_fixed_number_point;
 }
 

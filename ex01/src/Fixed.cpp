@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 08:32:13 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2026/03/15 19:21:18 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2026/03/20 07:56:50 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Fixed::Fixed() : _fixed_number_point(0) {std::cout << "Default constructor calle
 Fixed::Fixed(Fixed const& other)
 {
     _fixed_number_point = other._fixed_number_point;
-    std::cout << "Copy construcotor called\n";
+    std::cout << "Copy constructor called\n";
 };
 
 Fixed::Fixed(int const int_value) : _fixed_number_point(int_value << _fractionary_bits)
