@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 08:32:13 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2026/03/19 22:26:57 by gserafio         ###   ########.fr       */
+/*   Updated: 2026/03/20 07:29:01 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ Fixed & Fixed::operator=(const Fixed &other)
     
     return *this;
 };
+
 std::ostream & operator<<(std::ostream &os, Fixed const &fixed)
 {
     os << fixed.toFloat();
